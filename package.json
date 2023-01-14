@@ -5,7 +5,8 @@
   "scripts": {
     "start": "nodemon ./bin/www",
     "nodemon-dev": "nodemon ./bin/www & npx tailwindcss -i ./app.css -o ./public/stylesheets/main.css --watch",
-    "dev": "concurrently \"nodemon ./bin/www\" \"npx tailwindcss -i ./app.css -o ./public/stylesheets/main.css --watch\""
+    "dev": "concurrently \"nodemon ./bin/www\" \"npx tailwindcss -i ./app.css -o ./public/stylesheets/main.css --watch\"",
+    "serve": "node ./bin/www"
   },
   "dependencies": {
     "connect-flash": "^0.1.1",
