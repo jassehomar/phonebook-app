@@ -1,3 +1,4 @@
+const dotenv = require("dotenv")
 const express = require("express")
 const path = require("path")
 const cookieParser = require("cookie-parser")
@@ -17,11 +18,12 @@ const contactsRouter = require("./routes/contacts")
 
 const mongoose = require("mongoose")
 
+dotenv.config();
+
 const app = express()
 
-
 mongoose
-  .connect("mongodb://localhost:27017/phonebook_app")
+  .connect(process.env.DB_URL)
   .then(() => {
     console.log("DB connected successfully")
   })
